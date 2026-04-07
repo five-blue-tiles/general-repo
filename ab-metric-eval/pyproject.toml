@@ -1,13 +1,13 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "ab-metric-eval"
-version = "0.1.0"
+version = "0.1.1"
 description = "Statistical analysis tools for A/B experiment metric evaluation"
 readme = "README.md"
-license = { file = "LICENSE" }
+license = { text = "MIT" }
 requires-python = ">=3.8"
 keywords = ["a/b testing", "experiment analysis", "statistics", "hypothesis testing", "cuped", "causal inference"]
 classifiers = [
@@ -34,8 +34,9 @@ dependencies = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/amclarke/ab-metric-eval"
-"Bug Tracker" = "https://github.com/amclarke/ab-metric-eval/issues"
+"Homepage" = "https://github.com/five-blue-tiles/general-repo/tree/main/ab-metric-eval"
+"Bug Tracker" = "https://github.com/five-blue-tiles/general-repo/issues"
 
-[tool.hatch.build.targets.wheel]
-packages = ["ab_metric_eval"]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ab_metric_eval*"]
