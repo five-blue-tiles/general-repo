@@ -556,8 +556,8 @@ def analyze_experiment_metric(df, metric_column, pre_exposure_eval_column=None,
             bias_test_results.append({
                 'test_name': 'Pre-Exposure Bias Test',
                 'test_type': "Fisher's Exact Test",
-                'odds_ratio': odds_ratio.round(4),
-                'p_value': pre_p_value.round(4),
+                'odds_ratio': round(float(odds_ratio), 4),
+                'p_value': round(float(pre_p_value), 4),
                 'bias_detected': bias_detected,
                 'bias_label': bias_label
             })
